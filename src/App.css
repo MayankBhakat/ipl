@@ -1,0 +1,44 @@
+
+.card {
+  padding: 2em;
+}
+
+
+.searchBar{
+  width: 60%;
+  margin: 0% 20% 2% 20%;
+  padding-top: 2%;
+  
+}
+
+.capsule{
+  
+  margin: 27px;
+  background-color: #39d7d7;
+  font-size: 20px;
+  border-radius: 200px;
+  color: rgb(18, 15, 15);
+}
+
+.remove{
+  font-size: 15px;
+}
+
+.error{
+  color: red;
+}
+
+
+@media print{
+  .noPrint{
+    display: none;
+  }
+  .print{
+      display: block;
+  }
+}
+
+/* .poke{
+  background-repeat: 'no-repeat';
+ 
+} */
