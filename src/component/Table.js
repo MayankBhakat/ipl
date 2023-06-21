@@ -3,14 +3,17 @@ import Table from 'react-bootstrap/Table';
 function MatchTable(props) {
 
   const venues={
-    "CSK":"Cheapk",
-    "RCB":"Chinnaswami",
-    "MI":"Whankhade",
-    "RR":"Sawai Mansingh",
-    "DC":"Feroz shah kotla",
-    "KXIP":"HPCA Dharmashala",
-    "SRH":"Uppal",
-    "KKR":"Eden Gardens"
+    "CSK":"Cheapuk Stadium",
+    "RCB":"Chinnaswami Stadium",
+    "MI":"Whankhade Stadium",
+    "RR":"Sawai Mansingh Stadium",
+    "DC":"Arun Jaitley Stadium",
+    "PBKS":"Mohali Stadium",
+    "SRH":"Rajiv Gandhi Stadium",
+    "KKR":"Eden Gardens Stadium",
+    "GT":"Narendra Modi Stadium",
+    "LSG":"Ekana Stadium"
+
   }
 
   const dates=props.datesArray

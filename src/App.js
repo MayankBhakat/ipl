@@ -8,7 +8,7 @@ import MatchTable from './component/Table';
 import Schedule from './component/Schedule';
 
 function App() {
-  const [teams,setTeams]=useState(["CSK","RCB","DC","SRH","MI","RR","KKR","KXIP"])
+  const [teams,setTeams]=useState(["CSK","RCB","DC","SRH","MI","RR","KKR","PBKS"])
 
   const [inputValue,setInputValue]=useState("")
 
@@ -17,9 +17,12 @@ function App() {
 
   const keyClicked=(event)=>{
     if(event.code==="Enter"){
-      setTeams([...teams,inputValue])
+      var arr=teams;
+      arr.push(inputValue)
+      setTeams(arr)
       setInputValue("")
     }
+   
     
   }
 
@@ -29,6 +32,10 @@ function App() {
     }))
   }
 
+
+  const handleChange=(event)=>{
+    setInputValue(event.target.value);
+  }
   const prepareSchedule=()=>{
     if(teams.length<4)
     setErrorMsg("Minimum 4 teams are required");
@@ -53,10 +60,11 @@ function App() {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
-    height: '1500px',
-    color: 'white',
+    height: '2200px',
+    color: 'black',
   }}
   >
+   
    <div className='searchBar'>
   <InputGroup size="lg">
         <InputGroup.Text id="inputGroup-sizing-lg">Add Teams</InputGroup.Text>
@@ -65,11 +73,12 @@ function App() {
           aria-describedby="inputGroup-sizing-sm"
           placeholder='Add a team name and press enter'
           value={inputValue}
-          onChange={(event)=>setInputValue(event.target.value)}
+          onChange={handleChange}
           onKeyDown={keyClicked}
         />
-         <Button variant="primary" onClick={prepareSchedule}>Submit</Button>
+         
       </InputGroup>
+      
       
       {teams.map(team=>(
         
